@@ -5,12 +5,12 @@ set -x
 # 配置
 ROOT_DIR="$(cd "$(dirname "$0")"/.. && pwd)"
 SDK_NAME="PubeasySDK"
-VERSION="0.3.8"
+VERSION="0.0.2"
 BUILD_DIR="$ROOT_DIR/build"
 PRODUCTS_DIR="$BUILD_DIR/products"
 INTERMEDIATE_DIR="$BUILD_DIR/intermediates"
 XCFRAMEWORK_OUTPUT="$PRODUCTS_DIR/${SDK_NAME}.xcframework"
-ZIP_OUTPUT="$PRODUCTS_DIR/${SDK_NAME}_${VERSION}.zip"
+ZIP_OUTPUT="$PRODUCTS_DIR/PubYanSDK_${VERSION}.zip"
 
 IOS_MIN_VERSION="12.0"
 

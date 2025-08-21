@@ -1,0 +1,10 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '9.0'
+
+target 'TestApp' do
+  use_frameworks!
+  
+  # 使用 Git 源安装 PubyYanSDK
+  pod 'PubyYanSDK', :podspec => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/PubyYanSDK.podspec'
+end
