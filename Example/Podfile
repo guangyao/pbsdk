@@ -7,8 +7,13 @@ platform :ios, '12.0'
 
 target 'PubeasySDK' do
   
-  # 使用相对路径
-#   pod 'PubeasySDK', '0.3.8'
-   pod 'PubeasySDK', :path => '../'
+  # 使用相对路径（本地开发）
+#   pod 'PubeasySDK', :path => '../'
+  
+  # 使用 GitHub 源（适用于所有电脑）
+  pod 'PubyYanSDK', :podspec => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/PubyYanSDK.podspec'
+  
+  # 使用 CocoaPods 官方源（需要等待 CDN 同步）
+#   pod 'PubyYanSDK', '0.0.1'
   
 end
