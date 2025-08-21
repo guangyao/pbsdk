@@ -5,7 +5,7 @@ set -x
 # 配置
 ROOT_DIR="$(cd "$(dirname "$0")"/.. && pwd)"
 SDK_NAME="PubeasySDK"
-VERSION="0.0.2"
+VERSION="0.0.3"
 BUILD_DIR="$ROOT_DIR/build"
 PRODUCTS_DIR="$BUILD_DIR/products"
 INTERMEDIATE_DIR="$BUILD_DIR/intermediates"
@@ -132,6 +132,7 @@ mkdir -p "$STAGE_DIR/TradPlusFrameworks/TPCross"
 cp -R "$ROOT_DIR/TradPlusFrameworks/TradPlusAds/TPExchange.framework" "$STAGE_DIR/TradPlusFrameworks/TradPlusAds/"
 cp -R "$ROOT_DIR/TradPlusFrameworks/TradPlusAds/TradPlusAds.framework" "$STAGE_DIR/TradPlusFrameworks/TradPlusAds/"
 cp -R "$ROOT_DIR/TradPlusFrameworks/TradPlusAds/TradPlusAds.bundle" "$STAGE_DIR/TradPlusFrameworks/TradPlusAds/"
+cp -R "$ROOT_DIR/TradPlusFrameworks/TradPlusAds/TradPlusADX.bundle" "$STAGE_DIR/TradPlusFrameworks/TradPlusAds/"
 cp -R "$ROOT_DIR/TradPlusFrameworks/TPCross/TPCrossAdapter.framework" "$STAGE_DIR/TradPlusFrameworks/TPCross/"
 
 # 复制隐私文件

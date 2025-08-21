@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PubyYanSDK'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'Pubeasy 广告聚合 SDK（Binary 分发）'
   s.description      = <<-DESC
     以 .xcframework 二进制形式分发的 Pubeasy 广告聚合 SDK，
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '12.0'
 
   # 使用 GitHub Releases 分发（推荐方式）
-  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v0.0.2/PubYanSDK_0.0.2.zip' }
+  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v0.0.3/PubYanSDK_0.0.3.zip' }
 
   s.static_framework = true
   s.requires_arc     = true
@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
   # 资源与隐私清单
   s.resources = [
     'TradPlusFrameworks/TradPlusAds/TradPlusAds.bundle',
+    'TradPlusFrameworks/TradPlusAds/TradPlusADX.bundle',
     'Assets/PrivacyInfo.xcprivacy'
   ]
 
