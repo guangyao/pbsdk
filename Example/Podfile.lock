@@ -1,5 +1,5 @@
 PODS:
-  - PubyYanSDK (0.0.1)
+  - PubyYanSDK (0.0.3)
 
 DEPENDENCIES:
   - PubyYanSDK (from `https://raw.githubusercontent.com/guangyao/pbsdk/main/PubyYanSDK.podspec`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/guangyao/pbsdk/main/PubyYanSDK.podspec
 
 SPEC CHECKSUMS:
-  PubyYanSDK: 31c773928a08a3453cfc003187ef179919f1800f
+  PubyYanSDK: ce0a2e21129c67e9ea8131887ca88746f600d58b
 
 PODFILE CHECKSUM: aaea1166a8888855d1be9fc95794835314ce56ff
 

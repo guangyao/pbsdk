@@ -1,24 +1,22 @@
 Pod::Spec.new do |s|
   s.name             = 'PubyYanSDK'
-  s.version          = '0.0.3'
-  s.summary          = 'Pubeasy 广告聚合 SDK（Binary 分发）'
-  s.description      = <<-DESC
-    以 .xcframework 二进制形式分发的 Pubeasy 广告聚合 SDK，
-    内含 PubyYanSDK.xcframework 与 TradPlus 依赖及资源。
-  DESC
+  s.version          = '0.0.4'
+  s.summary          = 'Pubeasy Ad Aggregation SDK (Binary Distribution)'
+  s.description      = 'Pubeasy Ad Aggregation SDK distributed in .xcframework binary format,
+    includes PubyYanSDK.xcframework and TradPlus dependencies and resources.'
   s.homepage         = 'https://github.com/guangyao/pbsdk'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yanguangyao' => '976660988@qq.com' }
 
   s.platform         = :ios, '12.0'
 
-  # 使用 GitHub Releases 分发（推荐方式）
-  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v0.0.3/PubYanSDK_0.0.3.zip' }
+  # Use GitHub Releases distribution (recommended)
+  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v0.0.4/PubYanSDK_0.0.4.zip' }
 
   s.static_framework = true
   s.requires_arc     = true
 
-  # 二进制产物（相对 zip 解压根目录；本地 :path 使用时相对 podspec 目录）
+  # Binary products (relative to zip root directory; relative to podspec directory when using local :path)
   s.vendored_frameworks = [
     'PubeasySDK.xcframework',
     'TradPlusFrameworks/TradPlusAds/TradPlusAds.framework',
@@ -26,7 +24,7 @@ Pod::Spec.new do |s|
     'TradPlusFrameworks/TPCross/TPCrossAdapter.framework'
   ]
 
-  # 资源与隐私清单
+  # Resources and privacy manifest
   s.resources = [
     'TradPlusFrameworks/TradPlusAds/TradPlusAds.bundle',
     'TradPlusFrameworks/TradPlusAds/TradPlusADX.bundle',
@@ -45,6 +43,6 @@ Pod::Spec.new do |s|
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 
-  # 二进制分发不需要源码编译
+  # Binary distribution does not require source code compilation
   s.source_files = []
 end

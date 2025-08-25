@@ -5,7 +5,7 @@ set -x
 # 配置
 ROOT_DIR="$(cd "$(dirname "$0")"/.. && pwd)"
 SDK_NAME="PubeasySDK"
-VERSION="0.0.3"
+VERSION="0.0.4"
 BUILD_DIR="$ROOT_DIR/build"
 PRODUCTS_DIR="$BUILD_DIR/products"
 INTERMEDIATE_DIR="$BUILD_DIR/intermediates"
