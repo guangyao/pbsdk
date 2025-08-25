@@ -1,17 +1,20 @@
 Pod::Spec.new do |s|
-  s.name             = 'PubyYanSDK'
-  s.version          = '0.0.4'
-  s.summary          = 'Pubeasy Ad Aggregation SDK (Binary Distribution)'
-  s.description      = 'Pubeasy Ad Aggregation SDK distributed in .xcframework binary format,
-    includes PubyYanSDK.xcframework and TradPlus dependencies and resources.'
+  s.name             = 'PubeasySDK'
+  s.version          = '1.0.0'
+  s.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
+  s.description      = <<-DESC
+                       Pubeasy Ad Aggregation SDK distributed in xcframework binary format.
+                       Includes PubeasySDK xcframework and TradPlus dependencies and resources.
+                       Supports banner, interstitial, native, rewarded, and splash ads.
+                       DESC
   s.homepage         = 'https://github.com/guangyao/pbsdk'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'yanguangyao' => '976660988@qq.com' }
+  s.author           = { 'PubeasySDK Team' => '976660988@qq.com', 'yanguangyao' => '976660988@qq.com' }
 
   s.platform         = :ios, '12.0'
 
   # Use GitHub Releases distribution (recommended)
-  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v0.0.4/PubYanSDK_0.0.4.zip' }
+  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v1.0.0/PubeasySDK_1.0.0.zip' }
 
   s.static_framework = true
   s.requires_arc     = true

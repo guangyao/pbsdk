@@ -11,7 +11,7 @@ target 'PubeasySDK' do
 #   pod 'PubeasySDK', :path => '../'
   
   # 使用 GitHub 源（适用于所有电脑）
-  pod 'PubyYanSDK', :podspec => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/PubyYanSDK.podspec'
+  pod 'PubyYanSDK'
   
   # 使用 CocoaPods 官方源（需要等待 CDN 同步）
 #   pod 'PubyYanSDK', '0.0.1'
