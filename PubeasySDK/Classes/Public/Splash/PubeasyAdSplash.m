@@ -6,7 +6,7 @@
 //
 
 #import "PubeasyAdSplash.h"
-#import "../Private/PubeasySplashAD.h"
+#import "../../Private/PubeasySplashAD.h"
 
 @interface PubeasyAdSplash ()
 

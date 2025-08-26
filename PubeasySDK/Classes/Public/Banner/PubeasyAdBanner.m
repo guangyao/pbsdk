@@ -7,7 +7,7 @@
 
 #import "PubeasyAdBanner.h"
 //#import "PubeasyBannerAD.h"
-#import "../Private/PubeasyBannerAD.h"
+#import "../../Private/PubeasyBannerAD.h"
 
 @interface PubeasyAdBanner()
 

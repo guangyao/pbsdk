@@ -1,23 +1,35 @@
 Pod::Spec.new do |s|
-  s.name             = 'PubeasySDK'
-  s.version          = '1.0.0'
+  s.name             = 'PubyYanSDK'
+  s.version          = '0.0.5'
   s.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
   s.description      = <<-DESC
                        Pubeasy Ad Aggregation SDK distributed in xcframework binary format.
-                       Includes PubeasySDK xcframework and TradPlus dependencies and resources.
+                       Includes PubyYanSDK xcframework and TradPlus dependencies and resources.
                        Supports banner, interstitial, native, rewarded, and splash ads.
                        DESC
   s.homepage         = 'https://github.com/guangyao/pbsdk'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'PubeasySDK Team' => '976660988@qq.com', 'yanguangyao' => '976660988@qq.com' }
+  s.author           = { 'PubyYanSDK Team' => '976660988@qq.com', 'yanguangyao' => '976660988@qq.com' }
 
   s.platform         = :ios, '12.0'
 
-  # Use GitHub Releases distribution (recommended)
-  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v1.0.0/PubeasySDK_1.0.0.zip' }
+  # Use raw GitHub repository file URL for immediate availability after push
+  s.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.0.5/PubYanSDK_0.0.5.zip' }
 
   s.static_framework = true
   s.requires_arc     = true
+
+
+    # Source files for compilation (including both Public and Private)
+  s.source_files = 'PubeasySDK/Classes/**/*.{h,m}'
+  # Expose umbrella header and public headers
+  s.public_header_files = [
+    'PubeasySDK/PubeasySDK.h',
+    'PubeasySDK/Classes/Public/**/*.h'
+  ]
+  
+  # Main umbrella header
+  s.header_mappings_dir = 'PubeasySDK'
 
   # Binary products (relative to zip root directory; relative to podspec directory when using local :path)
   s.vendored_frameworks = [
@@ -45,7 +57,4 @@ Pod::Spec.new do |s|
   s.user_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
-
-  # Binary distribution does not require source code compilation
-  s.source_files = []
 end

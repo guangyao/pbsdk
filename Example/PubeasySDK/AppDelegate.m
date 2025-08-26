@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import <PubeasySDK/PubeasySDK.h>
 
 @interface AppDelegate ()
 
@@ -15,7 +16,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 初始化PubeasySDK
+    [PubeasyManager initSDK:@"demo_app_id_12345" completionBlock:^(NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"[PubeasySDK] 初始化失败: %@", error.localizedDescription);
+        } else {
+            NSLog(@"[PubeasySDK] 初始化成功");
+        }
+    }];
+    
+    // 设置可选配置参数
+    NSDictionary *config = @{
+        @"user_id": @"demo_user_123",
+        @"custom_param": @"example_value"
+    };
+    [PubeasyManager registerWithOptionalData:config];
+    
     return YES;
 }
 

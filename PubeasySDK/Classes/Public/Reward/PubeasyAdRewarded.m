@@ -6,7 +6,7 @@
 //
 
 #import "PubeasyAdRewarded.h"
-#import "../Private/PubeasyRewardAD.h"
+#import "../../Private/PubeasyRewardAD.h"
 
 @interface PubeasyAdRewarded ()
 

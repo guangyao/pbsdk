@@ -7,7 +7,7 @@
 
 #import "PubeasyAdNative.h"
 //#import "PubeasyNativeAD.h"
-#import "../Private/PubeasyNativeAD.h"
+#import "../../Private/PubeasyNativeAD.h"
 #import "PubeasyNativeRenderer.h"
 
 @interface PubeasyAdNative ()
