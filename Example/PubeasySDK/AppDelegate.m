@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import <PubeasySDK/PubeasySDK.h>
+@import PubeasySDK;
 
 @interface AppDelegate ()
 

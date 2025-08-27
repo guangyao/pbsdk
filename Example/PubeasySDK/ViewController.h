@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PubeasySDK/PubeasySDK.h>
+@import PubeasySDK;
 
 @interface ViewController : UIViewController <PubeasyAdBannerDelegate, PubeasyAdInterstitialDelegate, PubeasyAdRewardedDelegate, PubeasyAdNativeDelegate, PubeasyAdSplashDelegate>
 
