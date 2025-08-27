@@ -13,23 +13,20 @@ Pod::Spec.new do |s|
 
   s.platform         = :ios, '12.0'
 
-  # Use local HTTP server for testing - will be updated to GitHub URL after network is restored
-  s.source           = { :http => 'http://localhost:8080/PubYanSDK_0.0.5.zip' }
+  # Use raw GitHub repository file URL for immediate availability after push
+  s.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.0.5/PubYanSDK_0.0.5.zip' }
 
   s.static_framework = true
   s.requires_arc     = true
 
 
-    # Source files for compilation (including both Public and Private)
-  s.source_files = 'PubeasySDK/Classes/**/*.{h,m}'
-  # Expose umbrella header and public headers
-  s.public_header_files = [
-    'PubeasySDK/PubeasySDK.h',
-    'PubeasySDK/Classes/Public/**/*.h'
-  ]
-  
-  # Main umbrella header
-  s.header_mappings_dir = 'PubeasySDK'
+    # Binary distribution - no source files needed
+  # s.source_files = 'PubeasySDK/Classes/**/*.{h,m}'
+  # s.public_header_files = [
+  #   'PubeasySDK/PubeasySDK.h',
+  #   'PubeasySDK/Classes/Public/**/*.h'
+  # ]
+  # s.header_mappings_dir = 'PubeasySDK'
 
   # Binary products (relative to zip root directory; relative to podspec directory when using local :path)
   s.vendored_frameworks = [
