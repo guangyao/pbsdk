@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                        Supports banner, interstitial, native, rewarded, and splash ads.
                        DESC
   s.homepage         = 'https://github.com/guangyao/pbsdk'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT' }
   s.author           = { 'PubyYanSDK Team' => '976660988@qq.com', 'yanguangyao' => '976660988@qq.com' }
 
   s.platform         = :ios, '12.0'
