@@ -6,15 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@import PubeasySDK;
 
-@interface ViewController : UIViewController <PubeasyAdBannerDelegate, PubeasyAdInterstitialDelegate, PubeasyAdRewardedDelegate, PubeasyAdNativeDelegate, PubeasyAdSplashDelegate>
+@interface ViewController : UIViewController
 
-@property (nonatomic, strong) PubeasyAdBanner *bannerAd;
-@property (nonatomic, strong) PubeasyAdInterstitial *interstitialAd;
-@property (nonatomic, strong) PubeasyAdRewarded *rewardedAd;
-@property (nonatomic, strong) PubeasyAdNative *nativeAd;
-@property (nonatomic, strong) PubeasyAdSplash *splashAd;
 
 @end
 

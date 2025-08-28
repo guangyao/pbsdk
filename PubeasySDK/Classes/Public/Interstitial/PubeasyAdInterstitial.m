@@ -7,7 +7,7 @@
 
 #import "PubeasyAdInterstitial.h"
 //#import "PubeasyInterAD.h"
-#import "../../Private/PubeasyInterAD.h"
+#import "../Private/PubeasyInterAD.h"
 
 @interface PubeasyAdInterstitial ()
 

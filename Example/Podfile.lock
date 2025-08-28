@@ -1,16 +1,16 @@
 PODS:
-  - PubyYanSDK (0.0.5)
+  - PubeasySDK (0.3.8)
 
 DEPENDENCIES:
-  - PubyYanSDK
+  - PubeasySDK (from `../`)
 
-SPEC REPOS:
-  trunk:
-    - PubyYanSDK
+EXTERNAL SOURCES:
+  PubeasySDK:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  PubyYanSDK: d735e147047a1e149c435f61ca84cf62bf513adc
+  PubeasySDK: b0269967589a6581f4b538d0232982f06d76358a
 
-PODFILE CHECKSUM: a5de32fe5ee0048780e04f443dacf0d6c4c0abc8
+PODFILE CHECKSUM: 21ec373d060632f61b6f088d69fc03d4613df3c1
 
 COCOAPODS: 1.16.2

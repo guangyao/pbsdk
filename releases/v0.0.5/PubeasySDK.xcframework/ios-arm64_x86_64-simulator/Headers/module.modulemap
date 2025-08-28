@@ -1,5 +1,0 @@
-module PubeasySDK {
-  umbrella header "PubeasySDK.h"
-  export *
-  module * { export * }
-}
