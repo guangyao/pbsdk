@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PubyYanSDK'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
   s.description      = <<-DESC
                        Pubeasy Ad Aggregation SDK distributed in xcframework binary format.
@@ -14,8 +14,7 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '12.0'
 
   # Use raw GitHub repository file URL for immediate availability after push
-  s.source           = { :http => 'https://ghproxy.com/https://raw.githubusercontent.com/guangyao/pbsdk/new/releases/v0.1.1/PubYanSDK_0.1.1.zip' }
-
+  s.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.1.2/PubYanSDK_0.1.2.zip' }
   s.static_framework = true
   s.requires_arc     = true
 
@@ -48,7 +47,7 @@ Pod::Spec.new do |s|
 
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
-    'OTHER_LDFLAGS'  => '-ObjC -all_load'
+    'OTHER_LDFLAGS'  => '-ObjC -all_load',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64',  # 排除Intel模拟器架构
   }
 
