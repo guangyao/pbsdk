@@ -1,25 +1,34 @@
-Pod::Spec.new do |spec|
-  spec.name             = 'PubyYanSDK'
-  spec.version          = '0.1.2'
-  spec.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
-  spec.description      = <<-DESC
+Pod::Spec.new do |s|
+  s.name             = 'PubyYanSDK'
+  s.version          = '0.1.2'
+  s.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
+  s.description      = <<-DESC
                        Pubeasy Ad Aggregation SDK distributed in xcframework binary format.
+                       Includes PubyYanSDK xcframework and TradPlus dependencies and resources.
                        Supports banner, interstitial, native, rewarded, and splash ads.
                        DESC
-  spec.homepage         = 'https://github.com/guangyao/pbsdk'
-  spec.license          = { :type => 'MIT', :file => 'LICENSE' }
-  spec.author           = { 'yangy' => '976660988@qq.com' }
+  s.homepage         = 'https://github.com/guangyao/pbsdk'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'PubyYanSDK Team' => '976660988@qq.com', 'yanguangyao' => '976660988@qq.com' }
 
-  spec.platform         = :ios, '12.0'
+  s.platform         = :ios, '12.0'
 
-  # Public binary distribution 
-  spec.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.1.2/PubYanSDK_0.1.2.zip' }
+  # Use raw GitHub repository file URL for immediate availability after push
+  s.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.1.2/PubYanSDK_0.1.2.zip' }
+  s.static_framework = true
+  s.requires_arc     = true
 
-  spec.static_framework = true
-  spec.requires_arc     = true
 
-  # Binary products (paths are relative to ZIP root)
-  spec.vendored_frameworks = [
+    # Binary distribution - no source files needed
+  # s.source_files = 'PubeasySDK/Classes/**/*.{h,m}'
+  # s.public_header_files = [
+  #   'PubeasySDK/PubeasySDK.h',
+  #   'PubeasySDK/Classes/Public/**/*.h'
+  # ]
+  # s.header_mappings_dir = 'PubeasySDK'
+
+  # Binary products (relative to zip root directory; relative to podspec directory when using local :path)
+  s.vendored_frameworks = [
     'PubeasySDK.xcframework',
     'TradPlusFrameworks/TradPlusAds/TradPlusAds.framework',
     'TradPlusFrameworks/TradPlusAds/TPExchange.framework',
@@ -27,24 +36,22 @@ Pod::Spec.new do |spec|
   ]
 
   # Resources and privacy manifest
-  spec.resources = [
+  s.resources = [
     'TradPlusFrameworks/TradPlusAds/TradPlusAds.bundle',
     'TradPlusFrameworks/TradPlusAds/TradPlusADX.bundle',
     'Assets/PrivacyInfo.xcprivacy'
   ]
 
-  spec.frameworks = ['UIKit', 'Foundation', 'AdSupport', 'CoreTelephony']
-  spec.libraries  = ['z', 'sqlite3', 'c++']
+  s.frameworks = ['UIKit', 'Foundation', 'AdSupport', 'CoreTelephony']
+  s.libraries  = ['z', 'sqlite3', 'c++']
 
-  # XCFramework配置
-  spec.pod_target_xcconfig = {
+  s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
     'OTHER_LDFLAGS'  => '-ObjC -all_load',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64'  # 排除Intel模拟器架构
   }
 
-spec.user_target_xcconfig = {
-  'VALID_ARCHS' => 'arm64',  # 用户目标也限制为arm64
-  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64'  # 排除Intel模拟器架构
-}
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
 end
