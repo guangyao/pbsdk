@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PubyYanSDK'
-  spec.version          = '0.0.9'
+  spec.version          = '0.1.1'
   spec.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
   spec.description      = <<-DESC
                        Pubeasy Ad Aggregation SDK distributed in xcframework binary format.
@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.platform         = :ios, '12.0'
 
   # Public binary distribution 
-  spec.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.0.9/PubYanSDK_0.0.9.zip' }
+  spec.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.1.1/PubYanSDK_0.1.1.zip' }
 
   spec.static_framework = true
   spec.requires_arc     = true
@@ -45,7 +45,7 @@ Pod::Spec.new do |spec|
   'PROJECT_TYPE_IS_WORKSPACE' => 'YES',
   'ALWAYS_SEARCH_USER_PATHS' => 'YES',
   'USE_HEADERMAP' => 'NO'  # 禁用自动头文件映射
-}
+ }
 
 spec.user_target_xcconfig = {
   'VALID_ARCHS' => 'arm64',  # 用户目标也限制为arm64
