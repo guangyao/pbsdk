@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
 
   s.platform         = :ios, '12.0'
 
-  # Use raw GitHub repository file URL for immediate availability after push
-  s.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/new/releases/v0.1.2/PubYanSDK_0.1.2.zip' }
+  # Use GitHub Release download URL for stable access
+  s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v0.1.2/PubYanSDK_0.1.2.zip' }
   s.static_framework = true
   s.requires_arc     = true
 
