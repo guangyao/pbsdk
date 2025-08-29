@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PubyYanSDK'
-  s.version          = '0.0.6'
-  s.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
+  s.version          = '0.1.6'
+s.summary          = 'Pubeasy Ad Aggregation SDK - Binary Distribution'
   s.description      = <<-DESC
                        Pubeasy Ad Aggregation SDK distributed in xcframework binary format.
                        Includes PubyYanSDK xcframework and TradPlus dependencies and resources.
@@ -12,9 +12,11 @@ Pod::Spec.new do |s|
   s.author           = { 'PubyYanSDK Team' => '976660988@qq.com', 'yanguangyao' => '976660988@qq.com' }
 
   s.platform         = :ios, '12.0'
+  # Align the CocoaPods module name with the vendored framework name to fix <> imports
+  s.module_name      = 'PubyYanSDK'
 
   # Use raw GitHub repository file URL for immediate availability after push
-  s.source           = { :http => 'https://raw.githubusercontent.com/guangyao/pbsdk/main/releases/v0.0.6/PubYanSDK_0.0.6.zip' }
+    s.source           = { :http => 'https://github.com/guangyao/pbsdk/releases/download/v0.1.6/PubYanSDK_0.1.6.zip' }
 
   s.static_framework = true
   s.requires_arc     = true

@@ -1,4 +1,4 @@
-module PubeasySDK {
+module PubyYanSDK {
   umbrella header "PubeasySDK.h"
   export *
   module * { export * }

@@ -4,15 +4,18 @@ set -x
 
 # 配置
 ROOT_DIR="$(cd "$(dirname "$0")"/.. && pwd)"
+# 二进制产物/静态库与 umbrella 头文件仍沿用 PubeasySDK 命名
 SDK_NAME="PubeasySDK"
-VERSION="0.0.6"
+# CocoaPods 模块名改为 PubyYanSDK（与 podspec 的 s.module_name 对齐）
+MODULE_NAME="PubyYanSDK"
+VERSION="0.1.6"
 BUILD_DIR="$ROOT_DIR/build"
 PRODUCTS_DIR="$BUILD_DIR/products"
 INTERMEDIATE_DIR="$BUILD_DIR/intermediates"
 XCFRAMEWORK_OUTPUT="$PRODUCTS_DIR/${SDK_NAME}.xcframework"
 ZIP_OUTPUT="$PRODUCTS_DIR/PubYanSDK_${VERSION}.zip"
 
-IOS_MIN_VERSION="12.0"
+IOS_MIN_VERSION=12.0
 
 FRAMEWORKS_DIR="$ROOT_DIR/TradPlusFrameworks/TradPlusAds"
 
@@ -28,12 +31,12 @@ mkdir -p "$INCLUDE_DIR/Classes"
 rsync -a --include '*/' --include '*.h' --exclude '*' \
   "$ROOT_DIR/PubeasySDK/Classes/Public/" "$INCLUDE_DIR/Classes/"
 
-# 复制顶层 umbrella 头文件
+# 复制顶层 umbrella 头文件（文件名为 PubeasySDK.h）
 cp "$ROOT_DIR/PubeasySDK/PubeasySDK.h" "$INCLUDE_DIR/"
 
-# 生成 module.modulemap（Swift 友好）
+# 生成 module.modulemap（Swift 友好）。模块名采用 PubyYanSDK，umbrella 头仍为 PubeasySDK.h
 cat >"$INCLUDE_DIR/module.modulemap" <<MMEOF
-module ${SDK_NAME} {
+module ${MODULE_NAME} {
   umbrella header "${SDK_NAME}.h"
   export *
   module * { export * }
