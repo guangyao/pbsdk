@@ -45,13 +45,19 @@ Pod::Spec.new do |s|
   s.frameworks = ['UIKit', 'Foundation', 'AdSupport', 'CoreTelephony']
   s.libraries  = ['z', 'sqlite3', 'c++']
 
+  # XCFramework方式配置 - 适配TradPlusAds架构限制
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
-    'OTHER_LDFLAGS'  => '-ObjC -all_load',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64',  # 排除Intel模拟器架构
+    'OTHER_LDFLAGS' => '-ObjC -all_load',
+    'VALID_ARCHS' => 'arm64',  # TradPlusAds只支持arm64
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',  # M1芯片兼容
+    'PROJECT_TYPE_IS_WORKSPACE' => 'YES',
+    'ALWAYS_SEARCH_USER_PATHS' => 'YES',
+    'USE_HEADERMAP' => 'NO'  # 禁用自动头文件映射
   }
 
   s.user_target_xcconfig = {
+    'VALID_ARCHS' => 'arm64',  # 用户目标也限制为arm64
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 end
